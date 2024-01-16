@@ -6,24 +6,153 @@
     <title>Weather App</title>
   </head>
   <body>
-    <h1>Weather App</h1>
+    <div class="container">
+      <div class="weather-section">
+        <div class="weather-info-section">
+          <header>
+            <form>
+              <input type="search" placeholder="Enter a city..." required />
+              <input type="submit" value="Search" />
+            </form>
+          </header>
+          <main>
+            <div class="main-info">
+              <div class="text-section">
+                <div class="main">
+                  <h1>Lublin</h1>
+                  <p>
+                    Tuesday 16/01
+                    <br />
+                    07:00AM
+                  </p>
+                </div>
+                <div>
+                  <button class="map-button">Map</button>
+                </div>
+                <div class="temperature-section">
+                  <div class="weather-image">☀️</div>
+                  <div class="temperature">2°</div>
+                  <div class="scale-switch">
+                    <div class="scale">
+                      <a href="#" class="scale-link">C</a>
+                    </div>
+                    <div class="scale turn-off">
+                      <a href="#" class="scale-link">F</a>
+                    </div>
+                  </div>
+                  <div class="description">sunny</div>
+                </div>
+              </div>
+            </div>
+            <div class="factors">
+              <div class="rain">
+                <div class="text-section">
+                  <span class="property">Rain</span>
+                  <div class="property value">20%</div>
+                  <div class="image-section">🌤️</div>
+                </div>
+              </div>
+              <div class="wind">
+                <div class="text-section">
+                  <span class="property">Wind speed</span>
+                  <div class="property value">8 mph</div>
+                  <div class="image-section">🌤️</div>
+                </div>
+              </div>
+              <div class="humidity">
+                <div class="text-section">
+                  <span class="property">Humidity</span>
+                  <div class="property value">10%</div>
+                  <div class="image-section">🌤️</div>
+                </div>
+              </div>
+            </div>
+          </main>
+        </div>
+        <div class="hourly-forecast">
+          <div class="forecast-hour-wrap">
+            <div class="forecast-hour">
+              <div class="text-section-time">
+                <span>9AM</span>
+              </div>
+              <div class="image-section">🌧️</div>
+              <span class="text-section-temp">2° C</span>
+            </div>
+          </div>
+        </div>
+        <div class="forecast">
+          <div class="forecast-week-days">
+            <div class="week-day">
+              <div class="text-section">
+                <span class="day">Wednesday</span>
+                <span class="date">17/01</span>
+                <div class="temp">-2° C</div>
+              </div>
+              <div class="image-section">🌤️</div>
+            </div>
+            <div class="week-day">
+              <div class="text-section">
+                <span class="day">Thursday</span>
+                <span class="date">18/01</span>
+                <div class="temp">-2° C</div>
+              </div>
+              <div class="image-section">🌤️</div>
+            </div>
+            <div class="week-day">
+              <div class="text-section">
+                <span class="day">Friday</span>
+                <span class="date">19/01</span>
+                <div class="temp">-2° C</div>
+              </div>
+              <div class="image-section">🌤️</div>
+            </div>
+            <div class="week-day">
+              <div class="text-section">
+                <span class="day">Saturday</span>
+                <span class="date">20/01</span>
+                <div class="temp">-2° C</div>
+              </div>
+              <div class="image-section">🌤️</div>
+            </div>
+            <div class="week-day">
+              <div class="text-section">
+                <span class="day">Sunday</span>
+                <span class="date">21/01</span>
+                <div class="temp">-2° C</div>
+              </div>
+              <div class="image-section">🌤️</div>
+            </div>
+            <div class="week-day">
+              <div class="text-section">
+                <span class="day">Monday</span>
+                <span class="date">22/01</span>
+                <div class="temp">-2° C</div>
+              </div>
+              <div class="image-section">🌤️</div>
+            </div>
+          </div>
+        </div>
+        <footer>
+          <p>
+            This project was coded by
+            <a href="https://github.com/PatrycjaOosthuizen" target="_blank"
+              >Patrycja Oosthuizen</a
+            >
+            and is on
+            <a
+              href="https://github.com/PatrycjaOosthuizen/my-weather-app"
+              target="_blank"
+              >GitHub</a
+            >
+            and hosted on
+            <a
+              href="https://weather-app-patrycja-codes.netlify.app"
+              target="_blank"
+              >Netlify</a
+            >
+          </p>
+        </footer>
+      </div>
+    </div>
   </body>
-  <footer>
-    <p>
-      This project was coded by
-      <a href="https://github.com/PatrycjaOosthuizen" target="_blank"
-        >Patrycja Oosthuizen</a
-      >
-      and is on
-      <a
-        href="https://github.com/PatrycjaOosthuizen/my-weather-app"
-        target="_blank"
-        >GitHub</a
-      >
-      and hosted on
-      <a href="https://weather-app-patrycja-codes.netlify.app" target="_blank"
-        >Netlify</a
-      >
-    </p>
-  </footer>
 </html>
