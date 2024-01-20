@@ -1,11 +1,10 @@
 body {
   background: linear-gradient(
-    68.8deg,
-    rgba(0, 0, 0, 0.95) 1.8%,
-    rgb(0, 55, 79) 31.8%,
-    rgb(9, 93, 134) 56.2%,
-    rgb(15, 155, 217) 89%
+    112.1deg,
+    rgb(32, 38, 57) 11.4%,
+    rgb(63, 76, 119) 70.2%
   );
+
   color: #f9f7fe;
   font-family: "Roboto", sans-serif;
   font-weight: 300;
@@ -29,7 +28,8 @@ main {
 }
 
 .container {
-  max-width: 80%;
+  max-width: 1600px;
+  width: 90%;
   margin: 60px auto;
   padding: 30px;
 }
@@ -73,6 +73,11 @@ main {
   border-radius: 15px;
   position: relative;
   bottom: -3em;
+  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/111/384/original/thunder.JPG?1705767762");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-attachment: inherit;
+  background-size: 1310px;
 }
 .weather-today {
   display: grid;
@@ -159,7 +164,7 @@ main {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background-color: rgba(217, 217, 217, 0.1);
+  background-color: rgba(217, 217, 217, 0.2);
   border-radius: 15px;
   padding: 8px;
 }
@@ -197,7 +202,7 @@ main {
 
 .forecast {
   width: 350px;
-  margin-top: 20px;
+  margin-top: 40px;
 }
 .forecast-wrap {
   display: flex;
@@ -228,9 +233,8 @@ main {
 }
 footer {
   border-top: 1px solid #f9f7fe;
-  width: 800px;
+  width: 750px;
   padding: 5px 0 0 0;
-
   text-align: center;
   font-size: 14px;
 }
