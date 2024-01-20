@@ -175,9 +175,28 @@ main {
   height: 150px;
   width: 200px;
 }
+.factors .text-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-weight: 350;
+}
+.factors .text-section .property {
+  text-align: left;
+}
+.factors .text-section .property-value {
+  font-size: 40px;
+}
+
+.factors .image-section {
+  position: relative;
+  bottom: 0.1em;
+  right: -0.55em;
+  font-size: 70px;
+}
 
 .forecast {
-  width: 500px;
+  width: 350px;
   margin-top: 20px;
 }
 .forecast-wrap {
@@ -189,7 +208,7 @@ main {
   margin: 10px;
 }
 .week-day {
-  width: 400px;
+  width: 200px;
   height: 70px;
   display: flex;
   flex-direction: row;
@@ -198,9 +217,18 @@ main {
   border-radius: 15px;
   padding: 15px 35px;
 }
+.forecast .day {
+  font-size: 15px;
+}
+.forecast .temp {
+  font-size: 30px;
+}
+.forecast .image-section {
+  font-size: 50px;
+}
 footer {
   border-top: 1px solid #f9f7fe;
-  width: 1000px;
+  width: 800px;
   padding: 5px 0 0 0;
 
   text-align: center;
