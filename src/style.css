@@ -13,6 +13,7 @@ body {
 }
 a {
   color: #885df1;
+  font-weight: 500;
 }
 header {
   border-bottom: 1px solid #f9f7fe;
@@ -64,8 +65,11 @@ h1 {
 .weather-info-section {
   padding: 10px;
   width: 600px;
+  height: 500px;
   box-shadow: 0 30px 50px rgba(0, 0, 0, 0.95);
   border-radius: 15px;
+  position: relative;
+  bottom: -3em;
 }
 .weather-today {
   display: grid;
@@ -87,10 +91,10 @@ h1 {
 }
 
 .temperature-section .image-section {
-  font-size: 90px;
+  font-size: 150px;
   position: relative;
-  top: -0.5em;
-  left: -0.2em;
+  bottom: 0.1em;
+  right: 0.2em;
 }
 .temperature-section {
   display: flex;
@@ -129,6 +133,7 @@ h1 {
 }
 .scale-link:hover {
   color: rgba(255, 255, 255, 2);
+  cursor: pointer;
 }
 
 .factors {
@@ -137,11 +142,33 @@ h1 {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  gap: 8px;
-  width: 400px;
+  gap: 15px;
+  width: 550px;
+  padding: 5px;
+  position: relative;
+  bottom: -9.5em;
+}
+.factors .box {
+  position: relative;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   background-color: rgba(217, 217, 217, 0.1);
   border-radius: 15px;
-  padding: 15px 35px;
+  padding: 8px;
+}
+.rain.box {
+  height: 150px;
+  width: 200px;
+}
+.wind.box {
+  height: 150px;
+  width: 200px;
+}
+.humidity.box {
+  height: 150px;
+  width: 200px;
 }
 
 .forecast {
@@ -168,7 +195,13 @@ h1 {
 }
 footer {
   border-top: 1px solid #f9f7fe;
-  padding: 20px 0 0 0;
+  width: 1000px;
+  padding: 5px 0 0 0;
+
   text-align: center;
   font-size: 14px;
+}
+.footer {
+  margin: 2px;
+  font-size: larger;
 }
