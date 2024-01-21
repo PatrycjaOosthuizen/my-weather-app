@@ -17,9 +17,10 @@
       <div class="weather-section">
         <div class="weather-info-section">
           <header>
-            <form class="search-form">
+            <form class="search-form" id="search-form">
               <input
                 class="search-form-input"
+                id="search-form-input"
                 type="search"
                 placeholder="Enter a city..."
                 required
@@ -32,7 +33,7 @@
               <div class="basic-weather">
                 <div class="text-section-main">
                   <div class="main">
-                    <h1 class="city">London</h1>
+                    <h1 class="city" id="city">London</h1>
                     <p class="current-date">
                       Tuesday 16/01
                       <br />
@@ -154,5 +155,6 @@
         </footer>
       </div>
     </div>
+    <script src="src/app.js"></script>
   </body>
 </html>
