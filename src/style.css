@@ -14,6 +14,7 @@ a {
   color: #dcb5ff;
   font-weight: 400;
 }
+
 header {
   border-bottom: 1px solid #f9f7fe;
   height: 3px;
@@ -169,7 +170,7 @@ main {
   border-radius: 15px;
   padding: 8px;
 }
-.rain.box {
+.pressure.box {
   height: 150px;
   width: 200px;
 }
@@ -191,7 +192,7 @@ main {
   text-align: left;
 }
 .factors .text-section .property-value {
-  font-size: 40px;
+  font-size: 30px;
 }
 
 .factors .image-section {
