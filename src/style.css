@@ -29,9 +29,9 @@ main {
 }
 
 .container {
-  max-width: 1640px;
+  max-width: 900px;
   width: 90%;
-  margin: 0 auto;
+  margin: 60px auto;
   padding: 20px;
 }
 .search-form {
@@ -60,11 +60,6 @@ main {
 }
 .weather-section {
   margin: 0px auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 5px;
 }
 .weather-info-section {
   padding: 1px;
@@ -208,8 +203,8 @@ main {
 }
 
 .forecast {
-  width: 350px;
-  margin-top: 40px;
+  width: 600px;
+  margin-top: 70px;
 }
 .forecast-wrap {
   display: flex;
@@ -220,7 +215,7 @@ main {
   margin: 10px;
 }
 .week-day {
-  width: 200px;
+  width: 300px;
   height: 70px;
   display: flex;
   flex-direction: row;
