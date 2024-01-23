@@ -60,6 +60,7 @@ main {
 }
 .weather-section {
   margin: 0px auto;
+  padding: 20px;
 }
 .weather-info-section {
   padding: 1px;
