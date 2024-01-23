@@ -167,11 +167,12 @@ main {
   position: relative;
   border-radius: 15px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   background-color: rgba(217, 217, 217, 0.2);
   border-radius: 15px;
   padding: 8px;
+  text-align: end;
 }
 .pressure.box {
   height: 150px;
@@ -190,10 +191,9 @@ main {
   flex-direction: column;
   justify-content: space-between;
   font-weight: 350;
+  text-align: center;
 }
-.factors .text-section .property {
-  text-align: left;
-}
+
 .factors .text-section .property-value {
   font-size: 30px;
 }
@@ -202,7 +202,9 @@ main {
   position: relative;
   bottom: 0.1em;
   right: -0.55em;
-  font-size: 70px;
+}
+.image {
+  height: 85px;
 }
 
 .forecast {
