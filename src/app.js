@@ -18,7 +18,7 @@ function refreshWeather(response) {
   humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
   temperatureElement.innerHTML = Math.round(temperature);
   timeElement.innerHTML = formatDate(date);
-  iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="image-section">`;
+  iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="image-section-icon">`;
 }
 function formatDate(date) {
   let minutes = date.getMinutes();
@@ -86,4 +86,4 @@ celsiusLink.addEventListener("click", convertToCelsius);
 let fahrenheitLink = document.querySelector("#fahrenheit");
 fahrenheitLink.addEventListener("click", convertToFahrenheit);
 
-searchCity("London");
+searchCity("Oosthuizen");
