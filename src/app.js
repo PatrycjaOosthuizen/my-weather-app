@@ -38,7 +38,24 @@ function formatDate(date) {
     minutes = `0${minutes}`;
   }
 
-  return `${day}, ${hours}:${minutes}`;
+  let dates = date.getDate();
+  let months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+  let year = date.getFullYear();
+
+  return `${day}, ${months[0]} ${dates} ${year} ${hours}:${minutes}`;
 }
 
 function searchCity(city) {
