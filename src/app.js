@@ -98,6 +98,15 @@ function displayForecast() {
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
 
+const scaleLinkEls = document.querySelectorAll(".scale-link");
+
+scaleLinkEls.forEach((navLinkEl) => {
+  navLinkEl.addEventListener("click", function () {
+    document.querySelector(".active")?.classList.remove("active");
+    this.classList.add("active");
+  });
+});
+
 function convertToFahrenheit(event) {
   event.preventDefault();
   let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
