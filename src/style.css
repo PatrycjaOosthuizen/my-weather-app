@@ -240,8 +240,9 @@ footer {
   padding: 5px 0 0 0;
   text-align: center;
   font-size: 14px;
+  position: relative;
+  left: -5.2em;
 }
 .footer {
   margin: 2px;
-  font-size: larger;
 }

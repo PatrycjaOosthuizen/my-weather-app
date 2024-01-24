@@ -71,6 +71,30 @@ function handleSearchSubmit(event) {
   searchCity(searchInput.value);
 }
 
+function displayForecast() {
+  let days = ["Thu", "Fri", "Sat", "Sun", "Mon", "Tue"];
+  let forecastHTML = "";
+
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      ` <div class="forecast-wrap"> <div class="week-day">
+              <div class="text-section">
+                <span class="day">${day}</span>
+                <span class="date">17/01</span>
+                <div class="temp">
+                  <span class="temp-C">-2°C /</span>
+                  <span class="temp-F">28F</span>
+                </div>
+              </div>
+              <div class="image-section">🌤️</div>
+            </div>
+            </div>`;
+  });
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = forecastHTML;
+}
+
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
 
@@ -104,3 +128,4 @@ let fahrenheitLink = document.querySelector("#fahrenheit");
 fahrenheitLink.addEventListener("click", convertToFahrenheit);
 
 searchCity("Oosthuizen");
+displayForecast();
