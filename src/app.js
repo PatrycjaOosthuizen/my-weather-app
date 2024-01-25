@@ -19,10 +19,15 @@ function refreshWeather(response) {
   temperatureElement.innerHTML = Math.round(temperature);
   timeElement.innerHTML = formatDate(date);
   iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="image-section-icon">`;
+
+  getForecast(response.data.city);
 }
 function formatDate(date) {
   let minutes = date.getMinutes();
   let hours = date.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
   let days = [
     "Sunday",
     "Monday",
@@ -55,7 +60,9 @@ function formatDate(date) {
   ];
   let year = date.getFullYear();
 
-  return `${day}, ${months[0]} ${dates} ${year} ${hours}:${minutes}`;
+  return `${day}, ${dates} ${
+    months[date.getMonth()]
+  } ${year}, ${hours}:${minutes}`;
 }
 
 function searchCity(city) {
@@ -71,25 +78,61 @@ function handleSearchSubmit(event) {
   searchCity(searchInput.value);
 }
 
-function displayForecast() {
-  let days = ["Thu", "Fri", "Sat", "Sun", "Mon", "Tue"];
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  let dates = date.getDate();
+  let months = [
+    "01",
+    "02",
+    "03",
+    "04",
+    "05",
+    "06",
+    "07",
+    "08",
+    "09",
+    "10",
+    "11",
+    "12",
+  ];
+  let month = months[date.getMonth()];
+  return `${days[date.getDay()]} ${dates}/${month}`;
+}
+
+function getForecast(city) {
+  let apiKey = "6f64aatd0b0oe3cc63e4fb944c32303a";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+  axios(apiUrl).then(displayForecast);
+}
+
+function displayForecast(response) {
+  console.log(response.data);
+
   let forecastHTML = "";
 
-  days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      ` <div class="forecast-wrap"> <div class="week-day">
+  response.data.daily.forEach(function (day, index) {
+    if (index > 0 && index < 7) {
+      forecastHTML =
+        forecastHTML +
+        ` <div class="forecast-wrap"> <div class="week-day">
               <div class="text-section">
-                <span class="day">${day}</span>
-                <span class="date">17/01</span>
+                <span class="day">${formatDay(day.time)}</span>
                 <div class="temp">
-                  <span class="temp-C">-2°C /</span>
-                  <span class="temp-F">28F</span>
+                  <span class="temp-C">${Math.round(
+                    day.temperature.day
+                  )}°C /</span>
+                  <span class="temp-F">${Math.round(
+                    (day.temperature.day * 9) / 5 + 32
+                  )}°F</span>
                 </div>
               </div>
-              <div class="image-section">🌤️</div>
+              <div>
+              <img src="${day.condition.icon_url}" class="image-section"/>
+              </div>
             </div>
             </div>`;
+    }
   });
   let forecastElement = document.querySelector("#forecast");
   forecastElement.innerHTML = forecastHTML;
@@ -137,4 +180,3 @@ let fahrenheitLink = document.querySelector("#fahrenheit");
 fahrenheitLink.addEventListener("click", convertToFahrenheit);
 
 searchCity("Oosthuizen");
-displayForecast();
